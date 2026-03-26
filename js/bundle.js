@@ -185,27 +185,28 @@ class SoundEngine {
     this._currentSource = null;
   }
 
-  async init() {
+ async init() {
     if (this._initialized) return;
-    // Standard AudioContext for most TV browsers, webkit for older ones
-    const AudioContext = window.AudioContext || window.webkitAudioContext;
-    if (!AudioContext) {
-      console.warn('Web Audio API not supported on this TV');
-      return;
-    }
+    var AudioContext = window.AudioContext || window.webkitAudioContext;
+    if (!AudioContext) return;
     this.ctx = new AudioContext();
     this._initialized = true;
 
     try {
-      // Note: Ensure FLAP_AUDIO_BASE64 is defined in your bundle!
-      const binaryStr = atob(FLAP_AUDIO_BASE64);
-      const bytes = new Uint8Array(binaryStr.length);
-      for (let i = 0; i < binaryStr.length; i++) {
-        bytes[i] = binaryStr.charCodeAt(i);
-      }
-      this._audioBuffer = await this.ctx.decodeAudioData(bytes.buffer);
+      // This "fetches" the file from your GitHub folder
+      var response = await fetch('flap.mp3'); 
+      var arrayBuffer = await response.arrayBuffer();
+      var self = this;
+
+      // TV-friendly decoding
+      this.ctx.decodeAudioData(arrayBuffer, function(buffer) {
+        self._audioBuffer = buffer;
+        console.log("Flap sound loaded successfully!");
+      }, function(e) {
+        console.warn("Error decoding flap.mp3:", e);
+      });
     } catch (e) {
-      console.warn('Failed to decode flap audio:', e);
+        console.warn('Could not find flap.mp3 in the folder.', e);
     }
   }
 
