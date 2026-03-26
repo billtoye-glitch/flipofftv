@@ -396,40 +396,30 @@ class Board {
 }
 
 // --- INITIALIZATION ---
-document.addEventListener('DOMContentLoaded', function() {
+function initBoard() {
+    // Check if a board already exists to prevent the "Double Sign" bug
+    if (document.querySelector('.board')) return; 
+
     var container = document.getElementById('board-container');
     var sound = new SoundEngine();
     var board = new Board(container, sound);
 
     var messageIndex = 0;
-
     function cycle() {
-        if (MESSAGES[messageIndex]) {
-            board.displayMessage(MESSAGES[messageIndex]);
-            messageIndex = (messageIndex + 1) % MESSAGES.length;
-        }
+        board.displayMessage(MESSAGES[messageIndex]);
+        messageIndex = (messageIndex + 1) % MESSAGES.length;
     }
 
     cycle();
     setInterval(cycle, MESSAGE_INTERVAL + TOTAL_TRANSITION);
 
-    // ONE CLICK TO RULE THEM ALL
-    // This unlocks Sound AND Fullscreen at the same time
-    window.addEventListener('click', function() {
-        // 1. Unlock Sound
-        sound.init();
-        sound.resume();
+    // Attach to window so we can access it for the click-unlock
+    window.flipSound = sound;
+}
 
-        // 2. Request Fullscreen
-        var elem = document.documentElement; // The whole page
-        if (elem.requestFullscreen) {
-            elem.requestFullscreen();
-        } else if (elem.webkitRequestFullscreen) { /* Safari/Older TVs */
-            elem.webkitRequestFullscreen();
-        } else if (elem.msRequestFullscreen) { /* IE11 */
-            elem.msRequestFullscreen();
-        }
-        
-        console.log("Audio unlocked and Fullscreen requested!");
-    }, { once: true });
-});
+// Run immediately if the DOM is already ready, otherwise wait
+if (document.readyState === 'complete' || document.readyState === 'interactive') {
+    initBoard();
+} else {
+    document.addEventListener('DOMContentLoaded', initBoard);
+}
