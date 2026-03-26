@@ -1,5 +1,6 @@
-console.log("BUNDLE LOADED VERSION 2");
+console.log("BUNDLE LOADED - SYNTAX FIXED");
 
+// This is a tiny "silence" placeholder to prevent syntax errors
 const FLAP_AUDIO_BASE64 = "SUQzBAAAAAAAF1RTU0UAAAANAAADTGF2ZjU4LjI5LjEwMAD/+5BkAA==";
 const GRID_COLS = 22;
 const GRID_ROWS = 5;
