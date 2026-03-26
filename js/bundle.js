@@ -396,41 +396,40 @@ class Board {
 }
 
 // --- INITIALIZATION ---
-document.addEventListener('DOMContentLoaded', () => {
-    const container = document.getElementById('board-container') || document.body;
-    const sound = new SoundEngine();
-    const board = new Board(container, sound);
+document.addEventListener('DOMContentLoaded', function() {
+    var container = document.getElementById('board-container');
+    var sound = new SoundEngine();
+    var board = new Board(container, sound);
 
-    let messageIndex = 0;
+    var messageIndex = 0;
 
-    // Function to cycle messages
-    const nextMessage = () => {
-        board.displayMessage(MESSAGES[messageIndex]);
-        messageIndex = (messageIndex + 1) % MESSAGES.length;
-    };
+    function cycle() {
+        if (MESSAGES[messageIndex]) {
+            board.displayMessage(MESSAGES[messageIndex]);
+            messageIndex = (messageIndex + 1) % MESSAGES.length;
+        }
+    }
 
-    // Start the first message
-    nextMessage();
+    cycle();
+    setInterval(cycle, MESSAGE_INTERVAL + TOTAL_TRANSITION);
 
-    // Set the interval for the flip-off effect
-    setInterval(nextMessage, MESSAGE_INTERVAL + TOTAL_TRANSITION);
-
-    // Interaction for TVs (often requires a click to enable audio)
-    window.addEventListener('click', () => {
+    // ONE CLICK TO RULE THEM ALL
+    // This unlocks Sound AND Fullscreen at the same time
+    window.addEventListener('click', function() {
+        // 1. Unlock Sound
         sound.init();
+        sound.resume();
+
+        // 2. Request Fullscreen
+        var elem = document.documentElement; // The whole page
+        if (elem.requestFullscreen) {
+            elem.requestFullscreen();
+        } else if (elem.webkitRequestFullscreen) { /* Safari/Older TVs */
+            elem.webkitRequestFullscreen();
+        } else if (elem.msRequestFullscreen) { /* IE11 */
+            elem.msRequestFullscreen();
+        }
+        
+        console.log("Audio unlocked and Fullscreen requested!");
     }, { once: true });
 });
-
-// At the bottom of bundle.js
-var sound = new SoundEngine(); // Make sure this is globally accessible for the test
-var board = new Board(document.getElementById('board-container'), sound);
-
-// THIS IS THE KEY:
-window.addEventListener('click', function() {
-    console.log("Attempting to start audio...");
-    sound.init().then(function() {
-        sound.resume();
-        sound.playTransition(); // Test play immediately on click
-        console.log("Audio should be playing now!");
-    });
-}, { once: true });
