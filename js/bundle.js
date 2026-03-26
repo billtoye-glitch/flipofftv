@@ -32,6 +32,13 @@ const MESSAGES = [
     ''
   ],
   [
+    'NOBODY KNOWS',
+    'WHAT I AM DOING',
+    'IT IS GOOD',
+    'FOR MYSTIQUE',
+    '- LEONARDO DA VINCI'
+  ],
+  [
     '',
     'STAY HUNGRY',
     'STAY FOOLISH',
@@ -48,18 +55,53 @@ const MESSAGES = [
   ],
   [
     '',
+    'I WATCHED THE SUN',
+    'RISE THIS MORNING',
+    'IT WAS AVERAGE',
+    '- GENE KELLY'
+  ],
+  [
+    '',
     'THIS ISNT NAM', 
     'THIS IS BOWLING',
     'THERE ARE RULES',
-    '- MIES VAN DER ROHE',
+    '- JOHN MCCAIN',
     ''
   ],
   [
     '',
-    'MAKE IT SIMPLE',
-    'BUT SIGNIFICANT',
-    '- DON DRAPER',
-    ''
+    'IM NOT GOING TO ANY',
+    'MORE FUNERALS. IM',
+    'WAITING FOR MY OWN',
+    '- QUEEN ELIZABETH'
+  ],
+  [
+    'PSYCHIATRY IS JUST',
+    'THIS YEARS',
+    'CANDY PINK STOVE',
+    '',
+    '- LYNDON JOHNSON'
+  ],
+ [
+    '',
+    'THE DAY YOU SIGN',
+    'A CLIENT IS THE DAY',
+    'YOU START LOSING THEM',
+    '- DAVID OGLIVY'
+  ],
+  [
+    'EVERY GENERATION',
+    'THINKS THE NEXT ONE',
+    'IS THE END OF IT ALL',
+    '',
+    '- PLATO'
+  ],
+  [
+    'WHO KNOWS WHY',
+    'JESUS DID GOOD?',
+    'HE WANTED THE LOAVES',
+    'AND FISHES ACCOUNT',
+    '- JOHN D ROCKEFELLER'
   ],
   [
     '',
@@ -67,6 +109,13 @@ const MESSAGES = [
     'IT WILL MAKE ME',
     'LOOK YOUNGER',
     '- SALVADOR DALI',
+    ''
+  ],
+   [
+    '',
+    'MAKE IT SIMPLE',
+    'BUT SIGNIFICANT',
+    '- DON DRAPER',
     ''
   ],
 ];
