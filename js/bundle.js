@@ -395,14 +395,22 @@ class Board {
   }
 }
 
-// --- INITIALIZATION ---
-function initBoard() {
-    // Check if a board already exists to prevent the "Double Sign" bug
-    if (document.querySelector('.board')) return; 
-
+// --- SINGLETON INITIALIZATION ---
+function startFlipOff() {
     var container = document.getElementById('board-container');
+    if (!container) return;
+
+    // 1. Safety check: Wipe the container and stop if a board exists
+    if (document.querySelector('.board')) return;
+    container.innerHTML = ''; 
+
+    // 2. Setup Engines
     var sound = new SoundEngine();
     var board = new Board(container, sound);
+    
+    // Attach to window so our Click-to-Unlock listener can find them
+    window.globalSound = sound;
+    window.globalBoard = board;
 
     var messageIndex = 0;
     function cycle() {
@@ -410,48 +418,29 @@ function initBoard() {
         messageIndex = (messageIndex + 1) % MESSAGES.length;
     }
 
+    // 3. Start the loop
     cycle();
     setInterval(cycle, MESSAGE_INTERVAL + TOTAL_TRANSITION);
-
-    // Attach to window so we can access it for the click-unlock
-    window.flipSound = sound;
 }
 
-// Run immediately if the DOM is already ready, otherwise wait
+// 4. Global Click Listener for TV (Unlocks Fullscreen & Audio)
+window.addEventListener('click', function() {
+    // Request Fullscreen
+    var el = document.documentElement;
+    var requestMethod = el.requestFullscreen || el.webkitRequestFullScreen || el.webkitRequestFullscreen || el.msRequestFullscreen;
+    if (requestMethod) { requestMethod.call(el); }
+
+    // Unlock Audio Context
+    if (window.globalSound) {
+        window.globalSound.init();
+        window.globalSound.resume();
+        window.globalSound.playTransition(); // Test sound
+    }
+}, { once: true });
+
+// 5. Boot up logic
 if (document.readyState === 'complete' || document.readyState === 'interactive') {
-    initBoard();
+    startFlipOff();
 } else {
-    document.addEventListener('DOMContentLoaded', initBoard);
-}
-// --- THE "SINGLETON" INITIALIZER ---
-function startFlipOff() {
-  // 1. Check if a board is already there. If so, stop.
-  if (document.querySelector('.board')) {
-    console.log("Board already exists. Skipping second initialization.");
-    return;
-  }
-
-  var container = document.getElementById('board-container');
-  if (!container) return;
-
-  // 2. Initialize the engines
-  window.globalSound = new SoundEngine();
-  window.globalBoard = new Board(container, window.globalSound);
-
-  var messageIndex = 0;
-  function next() {
-    window.globalBoard.displayMessage(MESSAGES[messageIndex]);
-    messageIndex = (messageIndex + 1) % MESSAGES.length;
-  }
-
-  // 3. Kick off the first message
-  next();
-  setInterval(next, MESSAGE_INTERVAL + TOTAL_TRANSITION);
-}
-
-// Run the starter
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', startFlipOff);
-} else {
-  startFlipOff();
+    document.addEventListener('DOMContentLoaded', startFlipOff);
 }
