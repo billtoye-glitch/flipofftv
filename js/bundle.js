@@ -1,4 +1,5 @@
-
+console.log("BUNDLE LOADED VERSION 2");
+alert("Check Console!");
 const FLAP_AUDIO_BASE64 = FLAP_AUDIO_BASE64 || "";
 const GRID_COLS = 22;
 const GRID_ROWS = 5;
