@@ -22,9 +22,9 @@ export const ACCENT_COLORS = [
 export const MESSAGES = [
   [
     '',
-    'GOD IS IN',
-    'THE DETAILS .',
-    '- LUDWIG MIES',
+    'HEATHER TOYE',
+    'MOTHER OF DRAGONS',
+    '- GEORGE RR MARTIN',
     ''
   ],
   [
@@ -36,15 +36,15 @@ export const MESSAGES = [
   ],
   [
     '',
-    'GOOD DESIGN IS',
-    'GOOD BUSINESS',
+    'I'D SAY GO TO HELL',
+    'BUT I NEVER WANT TO SEE YOU AGAIN',
     '- THOMAS WATSON',
     ''
   ],
   [
     '',
-    'LESS IS MORE',
-    '',
+    'THIS ISN'T NAM, THIS IS BOWLING',
+    ''THERE ARE RULES,
     '- MIES VAN DER ROHE',
     ''
   ],
@@ -57,8 +57,8 @@ export const MESSAGES = [
   ],
   [
     '',
-    'HAVE NO FEAR OF',
-    'PERFECTION',
+    'HAVE  A DRINK',
+    'IT WILL MAKE ME LOOK YOUNGER',
     '- SALVADOR DALI',
     ''
   ]
