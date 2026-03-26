@@ -423,3 +423,35 @@ if (document.readyState === 'complete' || document.readyState === 'interactive')
 } else {
     document.addEventListener('DOMContentLoaded', initBoard);
 }
+// --- THE "SINGLETON" INITIALIZER ---
+function startFlipOff() {
+  // 1. Check if a board is already there. If so, stop.
+  if (document.querySelector('.board')) {
+    console.log("Board already exists. Skipping second initialization.");
+    return;
+  }
+
+  var container = document.getElementById('board-container');
+  if (!container) return;
+
+  // 2. Initialize the engines
+  window.globalSound = new SoundEngine();
+  window.globalBoard = new Board(container, window.globalSound);
+
+  var messageIndex = 0;
+  function next() {
+    window.globalBoard.displayMessage(MESSAGES[messageIndex]);
+    messageIndex = (messageIndex + 1) % MESSAGES.length;
+  }
+
+  // 3. Kick off the first message
+  next();
+  setInterval(next, MESSAGE_INTERVAL + TOTAL_TRANSITION);
+}
+
+// Run the starter
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', startFlipOff);
+} else {
+  startFlipOff();
+}
