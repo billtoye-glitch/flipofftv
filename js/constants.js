@@ -44,7 +44,7 @@ export const MESSAGES = [
   [
     '',
     'THIS ISNT NAM, THIS IS BOWLING',
-    'THERE ARE RULES,
+    'THERE ARE RULES',
     '-MIES VAN DER ROHE',
     ''
   ],
