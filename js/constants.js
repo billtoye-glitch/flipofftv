@@ -37,13 +37,15 @@ export const MESSAGES = [
   [
     '',
     'ID SAY GO TO HELL',
-    'BUT I NEVER WANT TO SEE YOU AGAIN',
+    'BUT I NEVER WANT', 
+    'TO SEE YOU AGAIN',
     '- THOMAS WATSON',
     ''
   ],
   [
     '',
-    'THIS ISNT NAM, THIS IS BOWLING',
+    'THIS ISNT NAM', 
+    'THIS IS BOWLING',
     'THERE ARE RULES',
     '- MIES VAN DER ROHE',
     ''
@@ -58,7 +60,8 @@ export const MESSAGES = [
   [
     '',
     'HAVE  A DRINK',
-    'IT WILL MAKE ME LOOK YOUNGER',
+    'IT WILL MAKE 
+    'ME LOOK YOUNGER',
     '- SALVADOR DALI',
     ''
   ]
