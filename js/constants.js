@@ -36,16 +36,16 @@ export const MESSAGES = [
   ],
   [
     '',
-    'I'D SAY GO TO HELL',
+    'ID SAY GO TO HELL',
     'BUT I NEVER WANT TO SEE YOU AGAIN',
     '- THOMAS WATSON',
     ''
   ],
   [
     '',
-    'THIS ISN'T NAM, THIS IS BOWLING',
-    ''THERE ARE RULES,
-    '- MIES VAN DER ROHE',
+    'THIS ISNT NAM, THIS IS BOWLING',
+    'THERE ARE RULES,
+    '-MIES VAN DER ROHE',
     ''
   ],
   [
