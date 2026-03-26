@@ -420,3 +420,17 @@ document.addEventListener('DOMContentLoaded', () => {
         sound.init();
     }, { once: true });
 });
+
+// At the bottom of bundle.js
+var sound = new SoundEngine(); // Make sure this is globally accessible for the test
+var board = new Board(document.getElementById('board-container'), sound);
+
+// THIS IS THE KEY:
+window.addEventListener('click', function() {
+    console.log("Attempting to start audio...");
+    sound.init().then(function() {
+        sound.resume();
+        sound.playTransition(); // Test play immediately on click
+        console.log("Audio should be playing now!");
+    });
+}, { once: true });
