@@ -64,9 +64,8 @@ const MESSAGES = [
     'HAVE  A DRINK',
     'IT WILL MAKE ME',
     'LOOK YOUNGER',
-    '- SALVADOR DALI',
-    ''
-  ]
+    '- SALVADOR DALI'
+  ],
 ];
 
 // --- TILE LOGIC (FORMERLY TILE.JS) ---
