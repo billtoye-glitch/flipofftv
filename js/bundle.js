@@ -75,7 +75,7 @@ const MESSAGES = [
     'WE SEEK TO',
     'CONQUER.',
     '- JULIUS CEASER',
-  ]
+  ],
  [
     '',
     'I WOULD KILL FOR',
