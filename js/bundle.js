@@ -83,7 +83,7 @@ const MESSAGES = [
     'BUT I DONT HAVE',
     'TO KILL ANYONE.',
    '- BILLY GRAHAM',
- ],
+   ],
   [
     '',
     'IM NOT GOING TO ANY',
