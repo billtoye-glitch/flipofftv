@@ -9,7 +9,7 @@ const SCRAMBLE_DURATION = 800;
 const FLIP_DURATION = 300;
 const STAGGER_DELAY = 25;
 const TOTAL_TRANSITION = 3800;
-const MESSAGE_INTERVAL = 14000;
+const MESSAGE_INTERVAL = 17000;
 
 const CHARSET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.,-!?'/";
 
@@ -42,7 +42,7 @@ const MESSAGES = [
     '',
     'STAY HUNGRY',
     'STAY FOOLISH',
-    '- STEVE JOBS',
+    '- RODNEY KING',
     ''
   ],
   [
@@ -68,6 +68,22 @@ const MESSAGES = [
     '- JOHN MCCAIN',
     ''
   ],
+ [
+    '',
+    'WE ARE CONQUERED',
+    'BY THE VERY THINGS',
+    'WE SEEK TO',
+    'CONQUER.',
+    '- JULIUS CEASER',
+  ]
+ [
+    '',
+    'I WOULD KILL FOR',
+    'A DRINK RIGHT NOW.',
+    'BUT I DONT HAVE',
+    'TO KILL ANYONE.',
+   '- BILLY GRAHAM',
+ ],
   [
     '',
     'IM NOT GOING TO ANY',
