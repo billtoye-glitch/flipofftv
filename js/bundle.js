@@ -26,8 +26,10 @@ const ACCENT_COLORS = [
 const MESSAGES = [
   [
     '',
-    'HEATHER TOYE',
-    'MOTHER OF DRAGONS',
+    'I AM NOT GOING',
+    'TO BE THE ONE',
+    'WHO SAYS NO',
+    'TO A GOOD TIME.',
     '- GEORGE RR MARTIN',
     ''
   ],
