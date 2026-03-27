@@ -51,7 +51,7 @@ const MESSAGES = [
     'ID SAY GO TO HELL',
     'BUT I NEVER WANT', 
     'TO SEE YOU AGAIN',
-    '- THOMAS WATSON',
+    '- THOMAS EDISON',
     ''
   ],
   [
