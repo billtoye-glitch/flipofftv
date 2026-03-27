@@ -25,7 +25,6 @@ const ACCENT_COLORS = [
 
 const MESSAGES = [
   [
-    '',
     'I AM NOT GOING',
     'TO BE THE ONE',
     'WHO SAYS NO',
