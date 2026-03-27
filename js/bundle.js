@@ -70,7 +70,6 @@ const MESSAGES = [
     ''
   ],
  [
-    '',
     'WE ARE CONQUERED',
     'BY THE VERY THINGS',
     'WE SEEK TO',
@@ -78,12 +77,11 @@ const MESSAGES = [
     '- JULIUS CEASER',
   ],
  [
-    '',
     'I WOULD KILL FOR',
     'A DRINK RIGHT NOW.',
     'BUT I DONT HAVE',
     'TO KILL ANYONE.',
-   '- BILLY GRAHAM',
+   '- REV BILLY GRAHAM',
    ],
   [
     '',
@@ -102,7 +100,7 @@ const MESSAGES = [
  [
     '',
     'THE DAY YOU SIGN A',
-    'CLIENT IS THE DAY YOU',
+    'CLIENT IS THE DAY U',
     'START LOSING THEM',
     '- DAVID OGLIVY'
   ],
