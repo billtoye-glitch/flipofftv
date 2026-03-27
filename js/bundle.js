@@ -84,9 +84,9 @@ const MESSAGES = [
   ],
  [
     '',
-    'THE DAY YOU SIGN',
-    'A CLIENT IS THE DAY',
-    'YOU START LOSING THEM',
+    'THE DAY YOU SIGN A',
+    'CLIENT IS THE DAY YOU',
+    'START LOSING THEM',
     '- DAVID OGLIVY'
   ],
   [
