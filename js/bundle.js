@@ -87,7 +87,21 @@ const MESSAGES = [
     '- JOHN MCCAIN',
     ''
   ],
- [
+   [
+    '',
+    'I LOVE YOU SO MUCH',
+    'AND CARE ABOUT YOU',
+    '- LOVE REAGAN',
+    ''
+  ],
+    [
+    '',
+    'THANK YOU FOR BEING AN',
+    'AMAZING MOM',
+    '- PATRICK (MEATBALL)',
+    ''
+  ],
+  [
     'WE ARE CONQUERED',
     'BY THE VERY THINGS',
     'WE SEEK TO',
