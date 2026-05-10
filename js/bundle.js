@@ -46,7 +46,13 @@ const MESSAGES = [
     '- RODNEY KING',
     ''
   ],
-  [
+   [
+    '',
+    'WE LOVE YOU MOM',
+    'THANK YOU',
+    '- PATRICK AND REAGAN',
+    ''
+  ], [
     '',
     'ID SAY GO TO HELL',
     'BUT I NEVER WANT', 
@@ -54,14 +60,26 @@ const MESSAGES = [
     '- THOMAS EDISON',
     ''
   ],
-  [
+    [
+    '',
+    'HAPPY MOTHERS DAY',
+    'STAY LOVELY',
+    '- PATRICK',
+    ''
+  ],[
     '',
     'I WATCHED THE SUN',
     'RISE THIS MORNING',
     'IT WAS AVERAGE',
     '- GENE KELLY'
   ],
-  [
+    [
+    '',
+    'YOU MAKE ME WANT ',
+    'TO BE JUST LIKE YOU',
+    '- REAGAN',
+    ''
+  ],[
     '',
     'THIS ISNT NAM', 
     'THIS IS BOWLING',
