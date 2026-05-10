@@ -96,8 +96,8 @@ const MESSAGES = [
   ],
     [
     '',
-    'THANK YOU FOR BEING AN',
-    'AMAZING MOM',
+    'THANK YOU FOR BEING',
+    'AN AMAZING MOM',
     '- PATRICK (MEATBALL)',
     ''
   ],
