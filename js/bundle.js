@@ -46,13 +46,7 @@ const MESSAGES = [
     '- RODNEY KING',
     ''
   ],
-   [
-    '',
-    'WE LOVE YOU MOM',
-    'THANK YOU',
-    '- PATRICK AND REAGAN',
-    ''
-  ], [
+    [
     '',
     'ID SAY GO TO HELL',
     'BUT I NEVER WANT', 
@@ -60,26 +54,21 @@ const MESSAGES = [
     '- THOMAS EDISON',
     ''
   ],
-    [
-    '',
-    'HAPPY MOTHERS DAY',
-    'STAY LOVELY',
-    '- PATRICK',
-    ''
-  ],[
+     [
     '',
     'I WATCHED THE SUN',
     'RISE THIS MORNING',
     'IT WAS AVERAGE',
     '- GENE KELLY'
   ],
-    [
+  [
     '',
-    'YOU MAKE ME WANT ',
-    'TO BE JUST LIKE YOU',
-    '- REAGAN',
-    ''
-  ],[
+    'WHEN LIFE GIVES',
+    'YOU LIMES MAKE',
+    'MARGARITAS',
+    '- HERNAN CORTES'
+  ],  
+  [
     '',
     'THIS ISNT NAM', 
     'THIS IS BOWLING',
@@ -87,21 +76,7 @@ const MESSAGES = [
     '- JOHN MCCAIN',
     ''
   ],
-   [
-    '',
-    'I LOVE YOU SO MUCH',
-    'AND CARE ABOUT YOU',
-    '- LOVE REAGAN',
-    ''
-  ],
-    [
-    '',
-    'THANK YOU FOR BEING',
-    'AN AMAZING MOM',
-    '- PATRICK (MEATBALL)',
-    ''
-  ],
-  [
+     [
     'WE ARE CONQUERED',
     'BY THE VERY THINGS',
     'WE SEEK TO',
