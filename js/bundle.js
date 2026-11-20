@@ -94,7 +94,7 @@ const MESSAGES = [
     'BY THE VERY THINGS',
     'WE SEEK TO',
     'CONQUER.',
-    '- JULIUS CEASER',
+    '- JULIUS CAESER',
   ],
  [
     'I WOULD KILL FOR',
@@ -122,7 +122,7 @@ const MESSAGES = [
     'THE DAY YOU SIGN A',
     'CLIENT IS THE DAY U',
     'START LOSING THEM',
-    '- DAVID OGLIVY'
+    '- DAVID OGILVY'
   ],
   [
     'EVERY GENERATION',
