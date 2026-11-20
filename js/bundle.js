@@ -74,6 +74,13 @@ const MESSAGES = [
     'MARGARITAS',
     '- HERNAN CORTES'
   ],  
+ [
+    'LIFE IS ONE',
+    'LONG INCONVENIENCE.',
+    '',
+    '- BUDDHA',
+    ''
+  ],
   [
     '',
     'THIS ISNT NAM', 
