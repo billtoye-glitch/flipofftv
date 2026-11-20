@@ -57,7 +57,7 @@ const MESSAGES = [
       [
     '',
     'HAPPY BIRTHDAY!',
-    'MAY!',
+    'MAE!',
     '- REAGAN TOYE',
     ''
   ], [
