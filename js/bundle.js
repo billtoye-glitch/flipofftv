@@ -54,7 +54,13 @@ const MESSAGES = [
     '- THOMAS EDISON',
     ''
   ],
-     [
+      [
+    '',
+    'HAPPY BIRTHDAY!',
+    'MAY!',
+    '- REAGAN TOYE',
+    ''
+  ], [
     '',
     'I WATCHED THE SUN',
     'RISE THIS MORNING',
